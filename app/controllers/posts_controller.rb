@@ -14,8 +14,13 @@ def create
       redirect_to posts_path
     end
 end
+    
+def show
+    @post = Post.find(params[:id])
+end
 
   def posta_params
   params.require(:post).permit(:body,:title)
   end
+  
 end

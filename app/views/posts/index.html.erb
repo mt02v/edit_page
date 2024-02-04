@@ -3,4 +3,6 @@
 <% @posts.each do |post| %>
   <p><%= post.title %></p>
   <p><%= post.body %></p>
+  
+  <p><%= link_to post.title, post_path(post) %></p>
 <% end %>
